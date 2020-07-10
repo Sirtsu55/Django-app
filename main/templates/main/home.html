@@ -1,0 +1,28 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<body style = 'background-color: teal'>
+  
+  
+  {% include "main/includes/bar.html" %}
+  {% include "main/includes/msgs.html"%}
+  {%block content%}
+  
+    <div class="row">
+      {%for article in articles%}
+          <div class="col s12 m6 l4">
+          <div class="card teal">
+              <div class="card-content white-text">
+              <span class="card-title">{{article.title}}</span>
+              <p style="font-size: 100%;">{{article.display_summary}}</p>
+              </div>
+          </div>
+          </div>
+      {%endfor%}
+    </div>
+  </div>
+  {%endblock%}
+</body>

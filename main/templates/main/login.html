@@ -1,0 +1,25 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+{% include "main/includes/bar.html"%}
+{% include "main/includes/msgs.html"%}
+
+{% block content %}
+<body style = 'background-color: teal'>
+    <form method="POST">
+        <div class="container">
+        {% csrf_token %}
+        <br>
+        {{form}}
+        <button class="btn floating" type="submit" name="action" >Submit<i class="material-icons right">send</i></button>
+        <br>
+        If you don't have an account, <strong><a href="/signup"></strong>register</a> instead!
+        </div>
+
+    </form>
+</body>
+{% endblock %}
+
